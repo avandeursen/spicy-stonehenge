@@ -30,7 +30,7 @@ In this section we’ll cover how to deploy Spicy Stonehenge on Turmeric SOA. Th
 
 1. Start by cloning the git repository from https://github.com/SERG-Delft/spicy-stonehenge
 
-2. The projects must be compiled with Maven (or m2e if you prefer) and you should start by compiling the TradeTypeLibrary and the common-library.
+2. The projects must be compiled with Maven (or m2e if you prefer) and you should start by compiling the TradeTypeLibrary, the QuoteTypeLibrary, and the common-library.
 
 3. After these two projects have been compiled, you can proceed to compile the remaining projects always making sure you compile first the <project-name>, then the <project-name>Impl and finally the project ending in -war. Each service has these three folders conveniently placed inside one folder so you should be able to find them easily.
 
