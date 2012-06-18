@@ -36,10 +36,10 @@ In this section we’ll cover how to deploy Spicy Stonehenge on Turmeric SOA. Th
 
 1. The projects must be compiled with Maven (or m2e if you prefer) and you should start by compiling the TradeTypeLibrary, the QuoteTypeLibrary, and the common-library. In your maven `settings.xml`, include plugin repository urls to http://www.ebayopensource.org/nexus/content/repositories/releases and http://www.ebayopensource.org/nexus/content/repositories/public
 
-1. After these two projects have been compiled, you can proceed to compile the remaining projects. The best order is the one listed above, as the services depend on each other. For each service, always make sure you compile first the *project-name*, then the *project-name*Impl and finally the project ending in -war. Each service has these three folders conveniently placed inside one folder so you should be able to find them easily.
+1. After these two projects have been compiled, you can proceed to compile the remaining projects. The best order is the one listed above, as the services depend on each other. For each service, always make sure you compile first the *project-name*, then the *project-name*Impl and finally the project ending in -war. Each service has these three folders conveniently placed inside one folder so you should be able to find them easily. Java 1.6 is required (@Override annotations are generated for interfaces).
 
 Just for reference, *project-name* projects describe web service interfaces for Turmeric SOA.
-*project-name*Impl projects describe web service implementations, which rely on the interfaces for its implementation.
+*project-name*-Impl projects describe web service implementations, which rely on the interfaces for its implementation.
 Projects ending in -war are merely packaging projects.
 
 4. When all the projects have been compiled, inside the -war folder of each project there is a target/ folder which contains a WAR file and a folder with the contents of the WAR file. It is the uncompressed folder we will be using for the purposes of this walkthrough. The next step involves setting up Jetty. Later we will come back to the -war projects. 
